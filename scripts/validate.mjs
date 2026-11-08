@@ -4,3 +4,9 @@ for(const name of [...api,'playwright-cli']){
  for(const rel of Object.keys(tree(dir)).filter(x=>x.endsWith('.md'))){const file=path.join(dir,rel),text=fs.readFileSync(file,'utf8').replace(/```[\s\S]*?```/g,'').replace(/`[^`]+`/g,'');for(const m of text.matchAll(/\]\(([^)]+)\)/g)){if(/^(https?:|#)/.test(m[1]))continue;assert.ok(fs.existsSync(path.resolve(path.dirname(file),m[1].split('#')[0])),`${file}: broken ${m[1]}`);}}
  console.log(`Valid metadata, license, resources: ${name}`);
 }
+
+const browserHashes=JSON.parse(fs.readFileSync("third_party/browser-files.json","utf8"));
+const installedHashes=tree(path.resolve("skills/playwright-cli"));
+for(const [file,hash] of Object.entries(browserHashes))assert.equal(installedHashes[file],hash,`Upstream browser snapshot changed: ${file}`);
+assert.deepEqual(Object.keys(installedHashes).filter(x=>x!=="LICENSE").sort(),Object.keys(browserHashes).sort());
+console.log("Official browser snapshot matches upstream file inventory");
