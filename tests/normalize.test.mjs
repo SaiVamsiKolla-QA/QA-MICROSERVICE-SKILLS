@@ -1,0 +1,11 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {spawnSync} from 'node:child_process';
+const script=path.resolve('skills/qa-zephyr-case-review/scripts/normalize.py');
+function run(t,extension,text){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'qa-export-'));t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));const input=path.join(dir,'input.'+extension),output=path.join(dir,'out.json');fs.writeFileSync(input,text);const proc=spawnSync('python3',[script,input,output],{encoding:'utf8'});return {proc,output,input};}
+test('CSV BOM, quoted comma/newline and original text preserved',t=>{
+ const text='\ufeffCase ID,Title,Steps\r\nID-1,"comma, title","first\nsecond"\r\n';const {proc,output}=run(t,'csv',text);assert.equal(proc.status,0,proc.stderr);const data=JSON.parse(fs.readFileSync(output));assert.equal(data.sourceText,text);assert.equal(data.cases[0].original.Steps,'first\nsecond');
+});
+test('JSON array/envelope preserve unknown fields and original IDs',t=>{for(const data of [[{id:'  CASE-1 ',extra:{nested:42}}],{testCases:[{id:'A',steps:[{action:'a',expected:'b'}]}]}]){const {proc,output}=run(t,'json',JSON.stringify(data));assert.equal(proc.status,0,proc.stderr);assert.deepEqual(JSON.parse(fs.readFileSync(output)).cases[0].original,Array.isArray(data)?data[0]:data.testCases[0]);}});
+test('reject unsupported, empty, malformed, duplicate and missing IDs without output',t=>{
+ for(const [ext,text] of [['xml','<x/>'],['json','[]'],['json','{'],['json','[null]'],['json','[{"id":"A"},{"id":"A"}]'],['json','[{"title":"x"}]'],['json','{"testCases":[],"other":[]}'],['csv','Case ID,Title\nA,x,extra\n'],['csv','Case ID,Case ID\nA,B\n'],['csv','ID,Name\nA,x\n']]){const {proc,output}=run(t,ext,text);assert.notEqual(proc.status,0);assert.equal(fs.existsSync(output),false);}
+});
+test('normalizer cannot overwrite source or existing report',t=>{const {input,output}=run(t,'json','[{"id":"A"}]');for(const dest of [input,output]){const before=fs.readFileSync(dest);assert.notEqual(spawnSync('python3',[script,input,dest]).status,0);assert.deepEqual(fs.readFileSync(dest),before);}});

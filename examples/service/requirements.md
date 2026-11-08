@@ -1,0 +1,6 @@
+# Synthetic Orders API, revision 1
+R1: POST /orders with Bearer alice-test or bob-test creates an owned order and returns 201 JSON. Body and subsequent GET contain required fields id (string), owner (alice/bob), quantity (integer), unitPriceCents (integer), totalCents (integer). Additional fields are permitted. Quantity is 1..10 inclusive and unitPriceCents 1..100000 inclusive. IDs match ^[a-zA-Z0-9_-]+$. Missing/invalid values return 422 and do not create an order. Malformed JSON returns 400. Duplicate ID returns 409 and preserves the original order.
+R2: Total is quantity × unitPriceCents in integer cents. Independently reviewed example: 2 units at 125 cents = 250 cents. Boundary examples: 1×1=1; 10×100000=1000000.
+R3: Missing/invalid credentials return 401. A foreign owner GET/DELETE returns 403 and cannot change data. Owner GET returns 200 with persisted data. Unknown ID returns 404.
+R4: Owner DELETE returns 200 {deleted:true}; subsequent GET returns 404. Tests own their IDs; inventory must be empty after cleanup in this disposable service.
+R5: /health returns 200 {ok:true}. /__inventory and /__events are local diagnostics only, never copy their unauthenticated design into a real service.

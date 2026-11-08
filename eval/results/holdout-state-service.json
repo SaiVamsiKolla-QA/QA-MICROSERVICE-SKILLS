@@ -1,0 +1,25 @@
+{
+  "inventory": {
+    "ids": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "id": "732169d5-3e3e-408f-946c-0cdf0d18c31a-1-0-0-c65a0e9cc155afc1f07a86c819651a6a3fa6aeda",
+      "owner": "alice",
+      "persisted": false
+    },
+    {
+      "method": "POST",
+      "id": "732169d5-3e3e-408f-946c-0cdf0d18c31a-0-0-0-c65a0e9cc155afc1f07a87a55d860c2a584ff584",
+      "owner": "alice",
+      "persisted": false
+    },
+    {
+      "method": "POST",
+      "id": "732169d5-3e3e-408f-946c-0cdf0d18c31a-1-0-0-c65a0e9cc155afc1f07a86c819651a6a3fa6aeda",
+      "owner": "alice",
+      "persisted": false
+    }
+  ]
+}

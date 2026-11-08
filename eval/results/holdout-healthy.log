@@ -1,0 +1,11 @@
+
+Running 6 tests using 4 workers
+
+  ✓  2 eval/holdout/holdout.spec.js:2:1 › [HOLD-1] lower boundary has total one cent (36ms)
+  ✓  3 eval/holdout/holdout.spec.js:5:1 › [HOLD-2] duplicate preserves original (39ms)
+  ✓  1 eval/holdout/holdout.spec.js:5:1 › [HOLD-2] duplicate preserves original (39ms)
+  ✓  4 eval/holdout/holdout.spec.js:2:1 › [HOLD-1] lower boundary has total one cent (37ms)
+  ✓  6 eval/holdout/holdout.spec.js:2:1 › [HOLD-1] lower boundary has total one cent (31ms)
+  ✓  5 eval/holdout/holdout.spec.js:5:1 › [HOLD-2] duplicate preserves original (33ms)
+
+  6 passed (663ms)

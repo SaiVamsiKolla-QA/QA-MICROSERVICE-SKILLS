@@ -1,0 +1,94 @@
+{
+  "testCases": [
+    {
+      "id": "ZEP-1",
+      "title": "Create two units at 125 cents",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "POST /orders with unique ID, quantity 2, unitPriceCents 125",
+      "testData": "Unique ID; quantity 2; unitPriceCents 125",
+      "expected": "201; required fields; owner alice; totalCents 250",
+      "requirements": "R1,R2"
+    },
+    {
+      "id": "ZEP-2",
+      "title": "Read created order",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "Create own order, then GET /orders/{id}",
+      "testData": "Unique ID; quantity 2; unitPriceCents 125",
+      "expected": "200; same values persisted; totalCents 250",
+      "requirements": "R1,R2,R3"
+    },
+    {
+      "id": "ZEP-3",
+      "title": "Foreign owner denied",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "Create as alice; GET and DELETE as bob; read again as alice",
+      "testData": "Unique ID; quantity 2; unitPriceCents 125",
+      "expected": "403 to both foreign requests; order remains unchanged",
+      "requirements": "R3"
+    },
+    {
+      "id": "ZEP-4",
+      "title": "Anonymous create denied",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "POST /orders without Authorization",
+      "testData": "Unique ID; quantity 2; unitPriceCents 125",
+      "expected": "401; order absent on authenticated read",
+      "requirements": "R3"
+    },
+    {
+      "id": "ZEP-5",
+      "title": "Invalid quantity rejected",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "POST with quantity 0 and then 11, using unique IDs",
+      "testData": "Unique ID; quantity 2; unitPriceCents 125",
+      "expected": "422; no resource created",
+      "requirements": "R1"
+    },
+    {
+      "id": "ZEP-6",
+      "title": "Delete owned order",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "Create as alice, confirm readable, DELETE, then GET",
+      "testData": "Unique ID; quantity 2; unitPriceCents 125",
+      "expected": "200 deleted true, followed by 404",
+      "requirements": "R4"
+    },
+    {
+      "id": "ZEP-7",
+      "title": "Check order works",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "Do the usual order flow",
+      "testData": "",
+      "expected": "Works correctly",
+      "requirements": ""
+    },
+    {
+      "id": "ZEP-8",
+      "title": "Create calculation conflict",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "POST quantity 2 and unitPriceCents 125",
+      "testData": "",
+      "expected": "201 with totalCents 200",
+      "requirements": "R2"
+    },
+    {
+      "id": "ZEP-9",
+      "title": "Missing expected result",
+      "preconditions": "",
+      "steps": "POST /orders",
+      "testData": "",
+      "expected": "",
+      "requirements": "R1"
+    },
+    {
+      "id": "ZEP-10",
+      "title": "Order discount",
+      "preconditions": "Isolated local Orders API; alice and bob synthetic principals",
+      "steps": "Apply loyalty discount to order",
+      "testData": "",
+      "expected": "Gold customer gets expected discount",
+      "requirements": ""
+    }
+  ]
+}

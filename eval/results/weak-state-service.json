@@ -1,0 +1,13 @@
+{
+  "inventory": {
+    "ids": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "id": "shared-order",
+      "owner": "alice",
+      "persisted": false
+    }
+  ]
+}

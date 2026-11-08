@@ -1,0 +1,51 @@
+{
+  "inventory": {
+    "ids": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-1-0-0-d83f1d63205cda7f8dda9abd9deb971de3383d5e",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-0-0-0-d83f1d63205cda7f8ddaf600a58b2deec6a4a00b",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-0-0-0-d83f1d63205cda7f8ddaf600a58b2deec6a4a00b",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-1-0-0-d83f1d63205cda7f8dda9abd9deb971de3383d5e",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-2-0-0-d83f1d63205cda7f8dda87f88a210227cd40c4a6",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-2-0-0-d83f1d63205cda7f8dda87f88a210227cd40c4a6",
+      "owner": "bob"
+    },
+    {
+      "method": "POST",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-1-0-0-d83f1d63205cda7f8ddad1e6039992b68d76a1a5",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a10c3129-0bec-4cb7-90f2-33f82fbf5ea6-1-0-0-d83f1d63205cda7f8ddad1e6039992b68d76a1a5",
+      "owner": "alice"
+    }
+  ]
+}

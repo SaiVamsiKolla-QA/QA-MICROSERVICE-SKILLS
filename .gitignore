@@ -1,0 +1,9 @@
+node_modules/
+test-results/
+playwright-report/
+.env*
+!.env.example
+.auth/
+.playwright-cli/
+.DS_Store
+__pycache__/

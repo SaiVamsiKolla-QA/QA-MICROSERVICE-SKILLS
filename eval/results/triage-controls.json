@@ -1,0 +1,309 @@
+[
+  {
+    "scenario": "healthy",
+    "create": {
+      "method": "POST",
+      "path": "/orders",
+      "principal": "alice",
+      "requestBody": {
+        "id": "triage-example",
+        "quantity": 2,
+        "unitPriceCents": 125
+      },
+      "status": 201,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "read": {
+      "method": "GET",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "cleanup": {
+      "method": "DELETE",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "deleted": true
+      }
+    },
+    "inventory": {
+      "ids": []
+    },
+    "events": [
+      {
+        "method": "POST",
+        "id": "triage-example",
+        "owner": "alice",
+        "persisted": true
+      },
+      {
+        "method": "DELETE",
+        "id": "triage-example",
+        "owner": "alice"
+      }
+    ]
+  },
+  {
+    "scenario": "content",
+    "create": {
+      "method": "POST",
+      "path": "/orders",
+      "principal": "alice",
+      "requestBody": {
+        "id": "triage-example",
+        "quantity": 2,
+        "unitPriceCents": 125
+      },
+      "status": 201,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 251
+      }
+    },
+    "read": {
+      "method": "GET",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "cleanup": {
+      "method": "DELETE",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "deleted": true
+      }
+    },
+    "inventory": {
+      "ids": []
+    },
+    "events": [
+      {
+        "method": "POST",
+        "id": "triage-example",
+        "owner": "alice",
+        "persisted": true
+      },
+      {
+        "method": "DELETE",
+        "id": "triage-example",
+        "owner": "alice"
+      }
+    ]
+  },
+  {
+    "scenario": "schema",
+    "create": {
+      "method": "POST",
+      "path": "/orders",
+      "principal": "alice",
+      "requestBody": {
+        "id": "triage-example",
+        "quantity": 2,
+        "unitPriceCents": 125
+      },
+      "status": 201,
+      "body": {
+        "id": "triage-example",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "read": {
+      "method": "GET",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "cleanup": {
+      "method": "DELETE",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "deleted": true
+      }
+    },
+    "inventory": {
+      "ids": []
+    },
+    "events": [
+      {
+        "method": "POST",
+        "id": "triage-example",
+        "owner": "alice",
+        "persisted": true
+      },
+      {
+        "method": "DELETE",
+        "id": "triage-example",
+        "owner": "alice"
+      }
+    ]
+  },
+  {
+    "scenario": "authorization",
+    "create": {
+      "method": "POST",
+      "path": "/orders",
+      "principal": "alice",
+      "requestBody": {
+        "id": "triage-example",
+        "quantity": 2,
+        "unitPriceCents": 125
+      },
+      "status": 201,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "read": {
+      "method": "GET",
+      "path": "/orders/triage-example",
+      "principal": "bob",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "cleanup": {
+      "method": "DELETE",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 200,
+      "body": {
+        "deleted": true
+      }
+    },
+    "inventory": {
+      "ids": []
+    },
+    "events": [
+      {
+        "method": "POST",
+        "id": "triage-example",
+        "owner": "alice",
+        "persisted": true
+      },
+      {
+        "method": "DELETE",
+        "id": "triage-example",
+        "owner": "alice"
+      }
+    ]
+  },
+  {
+    "scenario": "state",
+    "create": {
+      "method": "POST",
+      "path": "/orders",
+      "principal": "alice",
+      "requestBody": {
+        "id": "triage-example",
+        "quantity": 2,
+        "unitPriceCents": 125
+      },
+      "status": 201,
+      "body": {
+        "id": "triage-example",
+        "owner": "alice",
+        "quantity": 2,
+        "unitPriceCents": 125,
+        "totalCents": 250
+      }
+    },
+    "read": {
+      "method": "GET",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 404,
+      "body": {
+        "error": "not found"
+      }
+    },
+    "cleanup": {
+      "method": "DELETE",
+      "path": "/orders/triage-example",
+      "principal": "alice",
+      "requestBody": null,
+      "status": 404,
+      "body": {
+        "error": "not found"
+      }
+    },
+    "inventory": {
+      "ids": []
+    },
+    "events": [
+      {
+        "method": "POST",
+        "id": "triage-example",
+        "owner": "alice",
+        "persisted": false
+      }
+    ]
+  },
+  {
+    "scenario": "automation-oracle-control",
+    "observed": 250,
+    "incorrectTestExpected": 200,
+    "requirementExpected": 250
+  },
+  {
+    "scenario": "environment-closed-port-control",
+    "httpResponseReceived": false,
+    "error": "fetch failed",
+    "cause": "ECONNREFUSED"
+  }
+]

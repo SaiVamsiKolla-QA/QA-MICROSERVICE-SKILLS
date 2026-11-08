@@ -1,0 +1,139 @@
+{
+  "inventory": {
+    "ids": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-0-0-0-d83f1d63205cda7f8ddaf600a58b2deec6a4a00b",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-1-0-0-d83f1d63205cda7f8dda9abd9deb971de3383d5e",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-2-0-0-d83f1d63205cda7f8dda87f88a210227cd40c4a6",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-0-0-0-d83f1d63205cda7f8ddaf600a58b2deec6a4a00b",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-1-0-0-d83f1d63205cda7f8dda9abd9deb971de3383d5e",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-2-0-0-d83f1d63205cda7f8dda87f88a210227cd40c4a6",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-1-0-0-d83f1d63205cda7f8ddad1e6039992b68d76a1a5",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-1-0-0-d83f1d63205cda7f8ddad1e6039992b68d76a1a5",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-2-1-0-d83f1d63205cda7f8dda498486172f2533b5cf07",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-3-1-0-d83f1d63205cda7f8dda4e628ebd5dca0fd030ba",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-0-1-0-d83f1d63205cda7f8dda109f25433cac41f33c64",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-2-1-0-d83f1d63205cda7f8dda498486172f2533b5cf07",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-3-1-0-d83f1d63205cda7f8dda4e628ebd5dca0fd030ba",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-0-1-0-d83f1d63205cda7f8dda109f25433cac41f33c64",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-0-1-0-d83f1d63205cda7f8dda0beb66a7c193232a08ab",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-0-1-0-d83f1d63205cda7f8dda0beb66a7c193232a08ab",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-1-2-0-d83f1d63205cda7f8ddafbd44cbb304d00a50ab6",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-3-2-0-d83f1d63205cda7f8dda3a6c7859d867fab558cb",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-1-2-0-d83f1d63205cda7f8ddafbd44cbb304d00a50ab6",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-2-2-0-d83f1d63205cda7f8dda64cebb32425af95e6c4c",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-3-2-0-d83f1d63205cda7f8dda3a6c7859d867fab558cb",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-2-2-0-d83f1d63205cda7f8dda64cebb32425af95e6c4c",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-3-2-0-d83f1d63205cda7f8ddabed21bf6e82efffe7201",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "a7590a66-24ed-4fe7-9e97-81dd12e17337-3-2-0-d83f1d63205cda7f8ddabed21bf6e82efffe7201",
+      "owner": "alice"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+
+Running 2 tests using 2 workers
+
+  ✓  1 eval/weak/weak.spec.js:7:1 › reads order (25ms)
+  ✓  2 eval/weak/weak.spec.js:3:1 › creates order (25ms)
+
+  2 passed (313ms)

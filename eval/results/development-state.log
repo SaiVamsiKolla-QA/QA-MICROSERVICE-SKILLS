@@ -1,0 +1,142 @@
+
+Running 7 tests using 4 workers
+
+  ✓  4 examples/tests/orders.spec.js:22:1 › [ZEP-4] anonymous create is rejected and leaves no state (39ms)
+  ✓  3 examples/tests/orders.spec.js:2:1 › [ZEP-1] create returns documented body and total (37ms)
+  ✘  2 examples/tests/orders.spec.js:8:1 › [ZEP-2] created state is independently readable (47ms)
+  ✓  6 examples/tests/orders.spec.js:27:30 › [ZEP-5] quantity 0 rejected (16ms)
+  ✓  5 examples/tests/orders.spec.js:27:30 › [ZEP-5] quantity 11 rejected (15ms)
+  ✘  1 examples/tests/orders.spec.js:13:1 › [ZEP-3] foreign read and delete are forbidden without mutation (58ms)
+  ✘  7 examples/tests/orders.spec.js:31:1 › [ZEP-6] delete removes owned resource (34ms)
+
+
+  1) examples/tests/orders.spec.js:8:1 › [ZEP-2] created state is independently readable ───────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 404
+
+       9 |   expect((await request.post('/orders',{data:owned.payload,headers:owned.headers})).status()).toBe(201);
+      10 |   const response=await request.get(`/orders/${owned.id}`,{headers:owned.headers});await capture(info,'read-back',response);
+    > 11 |   expect(response.status()).toBe(200);const body=await response.json();shape(body);expect(body).toMatchObject({...owned.payload,owner:'alice',totalCents:250});
+         |                             ^
+      12 | });
+      13 | test('[ZEP-3] foreign read and delete are forbidden without mutation',async({request,owned},info)=>{
+      14 |   expect((await request.post('/orders',{data:owned.payload,headers:owned.headers})).status()).toBe(201);
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/examples/tests/orders.spec.js:11:29
+
+    Error Context: test-results/orders--ZEP-2-created-state-is-independently-readable/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/orders--ZEP-2-created-state-is-independently-readable/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/orders--ZEP-2-created-state-is-independently-readable/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) examples/tests/orders.spec.js:13:1 › [ZEP-3] foreign read and delete are forbidden without mutation 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 403
+    Received: 404
+
+      16 |   const read=await request.get(`/orders/${owned.id}`,{headers});await capture(info,'foreign-read',read);
+      17 |   const del=await request.delete(`/orders/${owned.id}`,{headers});await capture(info,'foreign-delete',del);
+    > 18 |   expect.soft(read.status()).toBe(403);expect.soft(await read.json()).toEqual({error:'forbidden'});
+         |                              ^
+      19 |   expect.soft(del.status()).toBe(403);
+      20 |   const after=await request.get(`/orders/${owned.id}`,{headers:owned.headers});expect(after.status()).toBe(200);expect((await after.json()).totalCents).toBe(250);
+      21 | });
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/examples/tests/orders.spec.js:18:30
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      Object {
+    -   "error": "forbidden",
+    +   "error": "not found",
+      }
+
+      16 |   const read=await request.get(`/orders/${owned.id}`,{headers});await capture(info,'foreign-read',read);
+      17 |   const del=await request.delete(`/orders/${owned.id}`,{headers});await capture(info,'foreign-delete',del);
+    > 18 |   expect.soft(read.status()).toBe(403);expect.soft(await read.json()).toEqual({error:'forbidden'});
+         |                                                                       ^
+      19 |   expect.soft(del.status()).toBe(403);
+      20 |   const after=await request.get(`/orders/${owned.id}`,{headers:owned.headers});expect(after.status()).toBe(200);expect((await after.json()).totalCents).toBe(250);
+      21 | });
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/examples/tests/orders.spec.js:18:71
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 403
+    Received: 404
+
+      17 |   const del=await request.delete(`/orders/${owned.id}`,{headers});await capture(info,'foreign-delete',del);
+      18 |   expect.soft(read.status()).toBe(403);expect.soft(await read.json()).toEqual({error:'forbidden'});
+    > 19 |   expect.soft(del.status()).toBe(403);
+         |                             ^
+      20 |   const after=await request.get(`/orders/${owned.id}`,{headers:owned.headers});expect(after.status()).toBe(200);expect((await after.json()).totalCents).toBe(250);
+      21 | });
+      22 | test('[ZEP-4] anonymous create is rejected and leaves no state',async({request,owned},info)=>{
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/examples/tests/orders.spec.js:19:29
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 404
+
+      18 |   expect.soft(read.status()).toBe(403);expect.soft(await read.json()).toEqual({error:'forbidden'});
+      19 |   expect.soft(del.status()).toBe(403);
+    > 20 |   const after=await request.get(`/orders/${owned.id}`,{headers:owned.headers});expect(after.status()).toBe(200);expect((await after.json()).totalCents).toBe(250);
+         |                                                                                                       ^
+      21 | });
+      22 | test('[ZEP-4] anonymous create is rejected and leaves no state',async({request,owned},info)=>{
+      23 |   const response=await request.post('/orders',{data:owned.payload});await capture(info,'anonymous',response);
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/examples/tests/orders.spec.js:20:103
+
+    Error Context: test-results/orders--ZEP-3-foreign-read-8f019--forbidden-without-mutation/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/orders--ZEP-3-foreign-read-8f019--forbidden-without-mutation/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/orders--ZEP-3-foreign-read-8f019--forbidden-without-mutation/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) examples/tests/orders.spec.js:31:1 › [ZEP-6] delete removes owned resource ────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 404
+
+      31 | test('[ZEP-6] delete removes owned resource',async({request,owned})=>{
+      32 |   expect((await request.post('/orders',{data:owned.payload,headers:owned.headers})).status()).toBe(201);
+    > 33 |   expect((await request.get(`/orders/${owned.id}`,{headers:owned.headers})).status()).toBe(200);
+         |                                                                                       ^
+      34 |   const del=await request.delete(`/orders/${owned.id}`,{headers:owned.headers});expect(del.status()).toBe(200);expect(await del.json()).toEqual({deleted:true});
+      35 |   expect((await request.get(`/orders/${owned.id}`,{headers:owned.headers})).status()).toBe(404);
+      36 | });
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/examples/tests/orders.spec.js:33:87
+
+    Error Context: test-results/orders--ZEP-6-delete-removes-owned-resource/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/orders--ZEP-6-delete-removes-owned-resource/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/orders--ZEP-6-delete-removes-owned-resource/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    examples/tests/orders.spec.js:8:1 › [ZEP-2] created state is independently readable ────────────
+    examples/tests/orders.spec.js:13:1 › [ZEP-3] foreign read and delete are forbidden without mutation 
+    examples/tests/orders.spec.js:31:1 › [ZEP-6] delete removes owned resource ─────────────────────
+  4 passed (693ms)

@@ -1,0 +1,69 @@
+{
+  "sourceFile": "cases.json",
+  "sourceSha256": "54f1e2d3280bffcec2e5c63645e631dc5f67396dc75739cfdc36b24c71121319",
+  "sourceText": "[\n  {\n    \"id\": \"HOLD-1\",\n    \"title\": \"Minimum valid values\",\n    \"preconditions\": \"alice; isolated ID\",\n    \"steps\": \"POST quantity 1, unitPriceCents 1\",\n    \"testData\": \"1,1\",\n    \"expected\": \"201; totalCents 1\",\n    \"requirements\": \"R1,R2\"\n  },\n  {\n    \"id\": \"HOLD-2\",\n    \"title\": \"Duplicate ID does not overwrite\",\n    \"preconditions\": \"Existing own order with quantity 2, unitPriceCents 125\",\n    \"steps\": \"POST same ID with quantity 10 then GET\",\n    \"testData\": \"same ID; quantity 10; unitPriceCents 125\",\n    \"expected\": \"409; original totalCents remains 250\",\n    \"requirements\": \"R1,R2\"\n  },\n  {\n    \"id\": \"HOLD-3\",\n    \"title\": \"Regional tax amount\",\n    \"steps\": \"Create taxable order\",\n    \"expected\": \"Correct regional tax\",\n    \"requirements\": \"\"\n  }\n]\n",
+  "cases": [
+    {
+      "caseId": "HOLD-1",
+      "sourceRecord": 1,
+      "original": {
+        "id": "HOLD-1",
+        "title": "Minimum valid values",
+        "preconditions": "alice; isolated ID",
+        "steps": "POST quantity 1, unitPriceCents 1",
+        "testData": "1,1",
+        "expected": "201; totalCents 1",
+        "requirements": "R1,R2"
+      },
+      "fields": {
+        "title": "Minimum valid values",
+        "preconditions": "alice; isolated ID",
+        "steps": "POST quantity 1, unitPriceCents 1",
+        "testData": "1,1",
+        "expected": "201; totalCents 1",
+        "requirements": "R1,R2"
+      }
+    },
+    {
+      "caseId": "HOLD-2",
+      "sourceRecord": 2,
+      "original": {
+        "id": "HOLD-2",
+        "title": "Duplicate ID does not overwrite",
+        "preconditions": "Existing own order with quantity 2, unitPriceCents 125",
+        "steps": "POST same ID with quantity 10 then GET",
+        "testData": "same ID; quantity 10; unitPriceCents 125",
+        "expected": "409; original totalCents remains 250",
+        "requirements": "R1,R2"
+      },
+      "fields": {
+        "title": "Duplicate ID does not overwrite",
+        "preconditions": "Existing own order with quantity 2, unitPriceCents 125",
+        "steps": "POST same ID with quantity 10 then GET",
+        "testData": "same ID; quantity 10; unitPriceCents 125",
+        "expected": "409; original totalCents remains 250",
+        "requirements": "R1,R2"
+      }
+    },
+    {
+      "caseId": "HOLD-3",
+      "sourceRecord": 3,
+      "original": {
+        "id": "HOLD-3",
+        "title": "Regional tax amount",
+        "steps": "Create taxable order",
+        "expected": "Correct regional tax",
+        "requirements": ""
+      },
+      "fields": {
+        "title": "Regional tax amount",
+        "preconditions": null,
+        "steps": "Create taxable order",
+        "testData": null,
+        "expected": "Correct regional tax",
+        "requirements": ""
+      }
+    }
+  ],
+  "unparsedRecords": 0
+}

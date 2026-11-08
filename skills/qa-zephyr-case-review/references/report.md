@@ -1,0 +1,2 @@
+# Case review record
+Use JSON or Markdown as requested. Each record has caseId, sourceFile, sourceRecord, original, verdict, evidence (requirement IDs and paths), proposedCorrection (separate from original), gaps, automationReadiness, missingEvidence. Finish with uncovered requirements, unparsed records and unresolved conflicts. Do not overwrite case IDs or flatten different steps into a guessed order.

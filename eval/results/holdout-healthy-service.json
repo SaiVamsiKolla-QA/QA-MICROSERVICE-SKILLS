@@ -1,0 +1,73 @@
+{
+  "inventory": {
+    "ids": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-0-0-0-c65a0e9cc155afc1f07a87a55d860c2a584ff584",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-3-1-0-c65a0e9cc155afc1f07afcd2bdc051d03cdd35b1",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-1-0-0-c65a0e9cc155afc1f07a86c819651a6a3fa6aeda",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-2-1-0-c65a0e9cc155afc1f07a5972f11bccc308dedbfe",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-0-0-0-c65a0e9cc155afc1f07a87a55d860c2a584ff584",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-1-0-0-c65a0e9cc155afc1f07a86c819651a6a3fa6aeda",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-3-1-0-c65a0e9cc155afc1f07afcd2bdc051d03cdd35b1",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-2-1-0-c65a0e9cc155afc1f07a5972f11bccc308dedbfe",
+      "owner": "alice"
+    },
+    {
+      "method": "POST",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-1-2-0-c65a0e9cc155afc1f07aec97e3d05958922d9b0f",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-0-2-0-c65a0e9cc155afc1f07aebfa54c3585f859d3eb4",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-0-2-0-c65a0e9cc155afc1f07aebfa54c3585f859d3eb4",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "7564a80b-9671-4146-ad7e-138c63e0552a-1-2-0-c65a0e9cc155afc1f07aec97e3d05958922d9b0f",
+      "owner": "alice"
+    }
+  ]
+}

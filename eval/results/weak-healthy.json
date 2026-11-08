@@ -1,0 +1,343 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/node_modules/@playwright/test/cli.js",
+      "test",
+      "--config=eval/playwright.config.js",
+      "--workers=4",
+      "--repeat-each=3"
+    ],
+    "configFile": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/playwright.config.js",
+    "rootDir": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/test-results",
+        "repeatEach": 3,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval",
+        "testIgnore": [],
+        "testMatch": [
+          "weak/*.spec.js"
+        ],
+        "timeout": 10000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/test-results",
+        "repeatEach": 3,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "name": "",
+        "testDir": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval",
+        "snapshotDir": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval",
+        "testIgnore": [],
+        "testMatch": "weak/*.spec.js",
+        "timeout": 10000,
+        "use": {
+          "baseURL": "http://127.0.0.1:57188",
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/results/weak-healthy.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "weak/weak.spec.js",
+      "file": "weak/weak.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "creates order",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:08:04.921Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 38,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js:5:25",
+                    "location": {
+                      "file": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js",
+                      "column": 25,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m test(\u001b[32m'creates order'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({request})\u001b[33m=>\u001b[39m{\n \u001b[90m 4 |\u001b[39m   \u001b[36mconst\u001b[39m response\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'/orders'\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'Bearer alice-test'\u001b[39m}\u001b[33m,\u001b[39mdata\u001b[33m:\u001b[39m{id\u001b[33m,\u001b[39mquantity\u001b[33m:\u001b[39m\u001b[35m2\u001b[39m\u001b[33m,\u001b[39munitPriceCents\u001b[33m:\u001b[39m\u001b[35m125\u001b[39m}})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m test(\u001b[32m'reads order'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({request})\u001b[33m=>\u001b[39m{\n \u001b[90m 8 |\u001b[39m   \u001b[36mconst\u001b[39m response\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m`/orders/${id}`\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'Bearer alice-test'\u001b[39m}})\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js",
+                        "column": 25,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  3 | test('creates order',async({request})=>{\n  4 |   const response=await request.post('/orders',{headers:{Authorization:'Bearer alice-test'},data:{id,quantity:2,unitPriceCents:125}});\n> 5 |   expect(response.ok()).toBeTruthy();\n    |                         ^\n  6 | });\n  7 | test('reads order',async({request})=>{\n  8 |   const response=await request.get(`/orders/${id}`,{headers:{Authorization:'Bearer alice-test'}});\n    at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js:5:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:08:04.924Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/test-results/weak-weak-creates-order-repeat1/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/test-results/weak-weak-creates-order-repeat1/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js",
+                    "column": 25,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            },
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 31,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js:5:25",
+                    "location": {
+                      "file": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js",
+                      "column": 25,
+                      "line": 5
+                    },
+                    "snippet": " \u001b[90m 3 |\u001b[39m test(\u001b[32m'creates order'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({request})\u001b[33m=>\u001b[39m{\n \u001b[90m 4 |\u001b[39m   \u001b[36mconst\u001b[39m response\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mpost(\u001b[32m'/orders'\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'Bearer alice-test'\u001b[39m}\u001b[33m,\u001b[39mdata\u001b[33m:\u001b[39m{id\u001b[33m,\u001b[39mquantity\u001b[33m:\u001b[39m\u001b[35m2\u001b[39m\u001b[33m,\u001b[39munitPriceCents\u001b[33m:\u001b[39m\u001b[35m125\u001b[39m}})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m test(\u001b[32m'reads order'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({request})\u001b[33m=>\u001b[39m{\n \u001b[90m 8 |\u001b[39m   \u001b[36mconst\u001b[39m response\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39mget(\u001b[32m`/orders/${id}`\u001b[39m\u001b[33m,\u001b[39m{headers\u001b[33m:\u001b[39m{\u001b[33mAuthorization\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'Bearer alice-test'\u001b[39m}})\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js",
+                        "column": 25,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  3 | test('creates order',async({request})=>{\n  4 |   const response=await request.post('/orders',{headers:{Authorization:'Bearer alice-test'},data:{id,quantity:2,unitPriceCents:125}});\n> 5 |   expect(response.ok()).toBeTruthy();\n    |                         ^\n  6 | });\n  7 | test('reads order',async({request})=>{\n  8 |   const response=await request.get(`/orders/${id}`,{headers:{Authorization:'Bearer alice-test'}});\n    at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js:5:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:08:05.228Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/test-results/weak-weak-creates-order-repeat2/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/test-results/weak-weak-creates-order-repeat2/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/weak/weak.spec.js",
+                    "column": 25,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "525461f99f1c5f721cc1-0b04cd9259d048f90d2a",
+          "file": "weak/weak.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "reads order",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 31,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:08:04.919Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 31,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:08:04.923Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 10000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-08T18:08:05.228Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "525461f99f1c5f721cc1-93624dab23752df5fe48",
+          "file": "weak/weak.spec.js",
+          "line": 7,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-08T18:08:04.566Z",
+    "duration": 720.974,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

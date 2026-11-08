@@ -1,0 +1,62 @@
+[
+  {
+    "caseId": "ZEP-1",
+    "source": "examples/cases/development.json",
+    "test": "examples/tests/orders.spec.js",
+    "titlePrefix": "[ZEP-1]",
+    "requirements": "R1,R2",
+    "assertionSources": {
+      "status/body/permissions/state": "examples/service/requirements.md revision 1 R1,R2"
+    }
+  },
+  {
+    "caseId": "ZEP-2",
+    "source": "examples/cases/development.json",
+    "test": "examples/tests/orders.spec.js",
+    "titlePrefix": "[ZEP-2]",
+    "requirements": "R1,R2,R3",
+    "assertionSources": {
+      "status/body/permissions/state": "examples/service/requirements.md revision 1 R1,R2,R3"
+    }
+  },
+  {
+    "caseId": "ZEP-3",
+    "source": "examples/cases/development.json",
+    "test": "examples/tests/orders.spec.js",
+    "titlePrefix": "[ZEP-3]",
+    "requirements": "R3",
+    "assertionSources": {
+      "status/body/permissions/state": "examples/service/requirements.md revision 1 R3"
+    }
+  },
+  {
+    "caseId": "ZEP-4",
+    "source": "examples/cases/development.json",
+    "test": "examples/tests/orders.spec.js",
+    "titlePrefix": "[ZEP-4]",
+    "requirements": "R3",
+    "assertionSources": {
+      "status/body/permissions/state": "examples/service/requirements.md revision 1 R3"
+    }
+  },
+  {
+    "caseId": "ZEP-5",
+    "source": "examples/cases/development.json",
+    "test": "examples/tests/orders.spec.js",
+    "titlePrefix": "[ZEP-5]",
+    "requirements": "R1",
+    "assertionSources": {
+      "status/body/permissions/state": "examples/service/requirements.md revision 1 R1"
+    }
+  },
+  {
+    "caseId": "ZEP-6",
+    "source": "examples/cases/development.json",
+    "test": "examples/tests/orders.spec.js",
+    "titlePrefix": "[ZEP-6]",
+    "requirements": "R4",
+    "assertionSources": {
+      "status/body/permissions/state": "examples/service/requirements.md revision 1 R4"
+    }
+  }
+]

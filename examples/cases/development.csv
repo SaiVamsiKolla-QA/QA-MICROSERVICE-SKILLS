@@ -1,0 +1,11 @@
+Case ID,Title,Preconditions,Steps,Test Data,Expected Result,Requirement Links
+ZEP-1,Create two units at 125 cents,Isolated local Orders API; alice and bob synthetic principals,"POST /orders with unique ID, quantity 2, unitPriceCents 125",Unique ID; quantity 2; unitPriceCents 125,201; required fields; owner alice; totalCents 250,"R1,R2"
+ZEP-2,Read created order,Isolated local Orders API; alice and bob synthetic principals,"Create own order, then GET /orders/{id}",Unique ID; quantity 2; unitPriceCents 125,200; same values persisted; totalCents 250,"R1,R2,R3"
+ZEP-3,Foreign owner denied,Isolated local Orders API; alice and bob synthetic principals,Create as alice; GET and DELETE as bob; read again as alice,Unique ID; quantity 2; unitPriceCents 125,403 to both foreign requests; order remains unchanged,R3
+ZEP-4,Anonymous create denied,Isolated local Orders API; alice and bob synthetic principals,POST /orders without Authorization,Unique ID; quantity 2; unitPriceCents 125,401; order absent on authenticated read,R3
+ZEP-5,Invalid quantity rejected,Isolated local Orders API; alice and bob synthetic principals,"POST with quantity 0 and then 11, using unique IDs",Unique ID; quantity 2; unitPriceCents 125,422; no resource created,R1
+ZEP-6,Delete owned order,Isolated local Orders API; alice and bob synthetic principals,"Create as alice, confirm readable, DELETE, then GET",Unique ID; quantity 2; unitPriceCents 125,"200 deleted true, followed by 404",R4
+ZEP-7,Check order works,Isolated local Orders API; alice and bob synthetic principals,Do the usual order flow,,Works correctly,
+ZEP-8,Create calculation conflict,Isolated local Orders API; alice and bob synthetic principals,POST quantity 2 and unitPriceCents 125,,201 with totalCents 200,R2
+ZEP-9,Missing expected result,,POST /orders,,,R1
+ZEP-10,Order discount,Isolated local Orders API; alice and bob synthetic principals,Apply loyalty discount to order,,Gold customer gets expected discount,

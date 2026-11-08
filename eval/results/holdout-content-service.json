@@ -1,0 +1,29 @@
+{
+  "inventory": {
+    "ids": []
+  },
+  "events": [
+    {
+      "method": "POST",
+      "id": "0bccf217-e3be-44e4-b012-8244aa7e712c-0-0-0-c65a0e9cc155afc1f07a87a55d860c2a584ff584",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "POST",
+      "id": "0bccf217-e3be-44e4-b012-8244aa7e712c-1-0-0-c65a0e9cc155afc1f07a86c819651a6a3fa6aeda",
+      "owner": "alice",
+      "persisted": true
+    },
+    {
+      "method": "DELETE",
+      "id": "0bccf217-e3be-44e4-b012-8244aa7e712c-0-0-0-c65a0e9cc155afc1f07a87a55d860c2a584ff584",
+      "owner": "alice"
+    },
+    {
+      "method": "DELETE",
+      "id": "0bccf217-e3be-44e4-b012-8244aa7e712c-1-0-0-c65a0e9cc155afc1f07a86c819651a6a3fa6aeda",
+      "owner": "alice"
+    }
+  ]
+}

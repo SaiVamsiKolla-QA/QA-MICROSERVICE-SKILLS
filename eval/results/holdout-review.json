@@ -1,0 +1,24 @@
+{
+  "method": "Separate files; same author can see them; not blinded or statistically independent",
+  "cases": [
+    {
+      "caseId": "HOLD-1",
+      "verdict": "Valid",
+      "readiness": "Ready",
+      "evidence": "R1,R2 minimum boundary"
+    },
+    {
+      "caseId": "HOLD-2",
+      "verdict": "Valid",
+      "readiness": "Ready",
+      "evidence": "R1 duplicate preserves original; R2 250-cent example"
+    },
+    {
+      "caseId": "HOLD-3",
+      "verdict": "Needs clarification",
+      "readiness": "Blocked",
+      "evidence": "No regional tax requirement supplied; do not invent tax rate"
+    }
+  ],
+  "missedCoverage": "No foreign-principal scenario; authorization fault survives this holdout suite"
+}

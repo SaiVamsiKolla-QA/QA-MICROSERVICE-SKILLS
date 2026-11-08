@@ -1,0 +1,2 @@
+Adapted guidance from https://github.com/petrkindlmann/qa-skills (MIT, Petr Kindlmann), commit 62434253c2592f27b494609c27f224939c86346d. Rewritten for exported Zephyr cases and Playwright API workflows. No external checkout is required. LICENSE contains the upstream notice.
+Isolation, readability, defect-detection and repeat-run concepts also informed by https://github.com/hzijad/playwright-agent-skills (MIT, Zijad Helja), commit 84915d8f854d40128e8820d0c05a1d1b5c8e5871. Browser-specific prescriptions were excluded. See LICENSE.hzijad.

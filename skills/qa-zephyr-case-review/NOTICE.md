@@ -1,0 +1,1 @@
+Adapted guidance from https://github.com/petrkindlmann/qa-skills (MIT, Petr Kindlmann), commit 62434253c2592f27b494609c27f224939c86346d. Rewritten for exported Zephyr cases and Playwright API workflows. No external checkout is required. LICENSE contains the upstream notice.

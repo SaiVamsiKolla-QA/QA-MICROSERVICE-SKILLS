@@ -1,0 +1,36 @@
+
+Running 2 tests using 2 workers
+
+  ✓  1 eval/holdout/holdout.spec.js:5:1 › [HOLD-2] duplicate preserves original (32ms)
+  ✘  2 eval/holdout/holdout.spec.js:2:1 › [HOLD-1] lower boundary has total one cent (39ms)
+
+
+  1) eval/holdout/holdout.spec.js:2:1 › [HOLD-1] lower boundary has total one cent ─────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      1 | import {test,expect,shape} from '../../examples/tests/fixtures.js';
+      2 | test('[HOLD-1] lower boundary has total one cent',async({request,owned})=>{
+    > 3 |  const res=await request.post('/orders',{data:{...owned.payload,quantity:1,unitPriceCents:1},headers:owned.headers});expect(res.status()).toBe(201);const body=await res.json();shape(body);expect(body.totalCents).toBe(1);
+        |                                                                                                                                                                                                                     ^
+      4 | });
+      5 | test('[HOLD-2] duplicate preserves original',async({request,owned})=>{
+      6 |  expect((await request.post('/orders',{data:owned.payload,headers:owned.headers})).status()).toBe(201);
+        at /Users/vamsikolla/Desktop/kdemo/qa-microservice-skills/eval/holdout/holdout.spec.js:3:213
+
+    Error Context: test-results/holdout-holdout--HOLD-1-lower-boundary-has-total-one-cent/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/holdout-holdout--HOLD-1-lower-boundary-has-total-one-cent/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/holdout-holdout--HOLD-1-lower-boundary-has-total-one-cent/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    eval/holdout/holdout.spec.js:2:1 › [HOLD-1] lower boundary has total one cent ──────────────────
+  1 passed (331ms)
