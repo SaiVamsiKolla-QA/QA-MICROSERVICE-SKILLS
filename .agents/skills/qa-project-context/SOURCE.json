@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/petrkindlmann/qa-skills",
+  "commit": "62434253c2592f27b494609c27f224939c86346d",
+  "skillPath": "skills/qa-project-context",
+  "upstreamFilesSha256": {
+    "skills/qa-project-context/SKILL.md": "6e5b2d4bb7f9ffc52144e242fb5a0c969c9920b5fdf2dea82e229ea7e3e1c8bc",
+    "skills/qa-project-context/references/examples.md": "be4001f6a891d494f7c4ecd2e81ad68bf66c9196697a22d0ae336d9218f3579d"
+  },
+  "license": "MIT; exact root LICENSE copied to this package",
+  "adaptations": [
+    "Codex AGENTS.md and project-scoped .agents paths",
+    "API-first workflow; no browser/provider setup requirement",
+    "Evidence/unknowns and selective per-service loading",
+    "No mandatory context-skill invocation for every edit; handoff preserves scope without new authorization"
+  ],
+  "includedScripts": "No support scripts required; context is gathered manually."
+}

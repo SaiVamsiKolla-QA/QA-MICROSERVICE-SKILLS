@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "repository": "https://github.com/wshobson/agents",
+      "commit": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+      "paths": [
+        "plugins/javascript-typescript/skills/modern-javascript-patterns/SKILL.md",
+        "plugins/javascript-typescript/skills/modern-javascript-patterns/references/details.md"
+      ],
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "localLicense": "licenses/wshobson-MIT.txt",
+      "localAdaptations": "Selected names/modules/const/async/small-responsibility/error-context guidance. No universal arrow/array-method/immutability preference, retry wrappers, class hierarchies or pipeline framework.",
+      "urls": [
+        "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/javascript-typescript/skills/modern-javascript-patterns/SKILL.md",
+        "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/javascript-typescript/skills/modern-javascript-patterns/references/details.md"
+      ],
+      "licenseURL": "https://github.com/wshobson/agents/blob/9c61ab243def98f72da12abd41cfcf5bcd91af9d/LICENSE"
+    },
+    {
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "commit": "0412be76f50ab4f4f8abff3753efa9269fbbca5b",
+      "paths": [
+        "plugins/code-simplifier/agents/code-simplifier.md"
+      ],
+      "license": "Apache-2.0",
+      "licensePath": "plugins/code-simplifier/LICENSE",
+      "localLicense": "licenses/code-simplifier-APACHE-2.0.txt",
+      "localAdaptations": "Changed-code review process with Playwright contract/isolation/all-attempt cleanup invariants. Removed Claude/model/React/TypeScript-only instructions and universal declaration/avoid-catch preferences.",
+      "urls": [
+        "https://github.com/anthropics/claude-plugins-official/blob/0412be76f50ab4f4f8abff3753efa9269fbbca5b/plugins/code-simplifier/agents/code-simplifier.md"
+      ],
+      "licenseURL": "https://github.com/anthropics/claude-plugins-official/blob/0412be76f50ab4f4f8abff3753efa9269fbbca5b/plugins/code-simplifier/LICENSE"
+    }
+  ],
+  "method": "Current GitHub commit/file and license review; selected local adaptations only, no plugin collections installed. No upstream NOTICE found in inspected root/plugin directories."
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "maxNodeModuleJsDepth": 0
+  },
+  "include": [
+    ".agents/skills/qa-playwright-api-authoring/examples/orders/fixtures.mjs",
+    ".agents/skills/qa-playwright-api-authoring/examples/orders/data.mjs"
+  ]
+}

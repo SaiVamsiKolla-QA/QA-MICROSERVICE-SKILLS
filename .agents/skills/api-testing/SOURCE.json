@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/petrkindlmann/qa-skills",
+  "commit": "62434253c2592f27b494609c27f224939c86346d",
+  "originalFilesSha256": {
+    "SKILL.md": "244c14f1c8026bc30877e2706e6e49e324a00b1c53fff92ce9dc2fb592bedb76",
+    "references/test-patterns.md": "a5bd7e240cc03010579f398e65631563d2233ee9d85dfd25abe67f81c8449598",
+    "references/playwright-setup.md": "0877618c5b75513a2349178834d69aedd32f495e197b3d1da2a94bd216008a73",
+    "references/schema-validation.md": "2ef3baf4b7547acf9448cbd2cf31b5ad12406683450613ab1185863576be3c60"
+  },
+  "localAdaptations": "Entrypoints focused on microservice API testing; removed unrelated browser/AI-evaluation guidance and unavailable skill routing; softened unsupported gates. License/metadata removal requested separately. Upstream hashes describe originals.",
+  "cleanup": "Shared tooling pointers replaced by direct project commands; resources kept with skills."
+}

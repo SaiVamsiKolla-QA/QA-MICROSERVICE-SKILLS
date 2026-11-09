@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/addyosmani/agent-skills",
+  "commit": "301b02b12bff98e4688e6984af6556802322bbde",
+  "skillPath": "skills/context-engineering",
+  "upstreamFilesSha256": {
+    "skills/context-engineering/SKILL.md": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b"
+  },
+  "license": "MIT; exact root LICENSE copied to this package",
+  "adaptations": [
+    "Codex AGENTS.md and project-scoped .agents paths",
+    "API-first workflow; no browser/provider setup requirement",
+    "Evidence/unknowns and selective per-service loading",
+    "No mandatory context-skill invocation for every edit; handoff preserves scope without new authorization"
+  ],
+  "includedScripts": "No support scripts required; context is gathered manually."
+}

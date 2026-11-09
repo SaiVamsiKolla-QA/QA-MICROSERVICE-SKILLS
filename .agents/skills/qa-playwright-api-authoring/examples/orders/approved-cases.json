@@ -1,0 +1,81 @@
+[
+  {
+    "id": "ZEP-101",
+    "title": "Create correct total",
+    "preconditions": "Alice authenticated; ID absent",
+    "steps": "POST quantity=2, unitPriceCents=125; owner GET",
+    "testData": {
+      "quantity": 2,
+      "unitPriceCents": 125
+    },
+    "expected": "201; totalCents=250; persisted values match",
+    "requirements": [
+      "R1",
+      "R3"
+    ]
+  },
+  {
+    "id": "ZEP-102",
+    "title": "Foreign access denied",
+    "preconditions": "Alice creates order and verifies it with owner GET",
+    "steps": "Bob GET and DELETE same ID; Alice GET",
+    "expected": "404 for Bob; Alice still reads unchanged order",
+    "requirements": [
+      "R2",
+      "R3"
+    ]
+  },
+  {
+    "id": "ZEP-103",
+    "title": "Reject invalid quantity",
+    "preconditions": "Alice authenticated; reserved IDs absent",
+    "steps": "POST quantity=0 then 11, price=125; GET reserved IDs",
+    "expected": "422 with error string; each GET=404",
+    "requirements": [
+      "R1",
+      "R6"
+    ]
+  },
+  {
+    "id": "ZEP-104",
+    "title": "Anonymous create denied",
+    "preconditions": "ID absent",
+    "steps": "POST quantity=2, price=125 without credentials; Alice GET ID",
+    "expected": "401; owner GET=404",
+    "requirements": [
+      "R2",
+      "R6"
+    ]
+  },
+  {
+    "id": "ZEP-105",
+    "title": "Owned deletion",
+    "preconditions": "Alice creates and reads order",
+    "steps": "DELETE; GET; DELETE again",
+    "expected": "204;404;404",
+    "requirements": [
+      "R4"
+    ]
+  },
+  {
+    "id": "ZEP-106",
+    "title": "Duplicate preserves original",
+    "preconditions": "Alice creates quantity=2, price=125",
+    "steps": "POST same ID quantity=3; GET",
+    "expected": "409; persisted total remains 250 and quantity remains 2",
+    "requirements": [
+      "R5"
+    ]
+  },
+  {
+    "id": "ZEP-107",
+    "title": "Accepted quantity boundaries",
+    "preconditions": "Alice; distinct absent IDs",
+    "steps": "POST quantity=1 then 10 with price=125; owner GET",
+    "expected": "201; totals 125 and 1250; persisted values match",
+    "requirements": [
+      "R1",
+      "R3"
+    ]
+  }
+]

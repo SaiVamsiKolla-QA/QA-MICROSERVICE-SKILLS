@@ -1,0 +1,7 @@
+{
+  "extends": "./jsconfig.qa.json",
+  "compilerOptions": {
+    "checkJs": false
+  },
+  "include": [".agents/skills/qa-playwright-api-authoring/examples/orders/*.mjs"]
+}

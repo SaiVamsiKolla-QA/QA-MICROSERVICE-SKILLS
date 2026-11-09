@@ -1,18 +1,29 @@
 {
   "name": "qa-microservice-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": ">=22.12.0"
   },
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
-    "test:api": "playwright test",
-    "evaluate": "node scripts/evaluate.mjs",
-    "validate": "node scripts/validate.mjs"
+    "test:api": "playwright test --config .agents/skills/qa-playwright-api-authoring/examples/orders/playwright.config.mjs",
+    "lint": "eslint \".agents/skills/qa-playwright-api-authoring/examples/orders/*.mjs\" eslint.config.mjs prettier.config.mjs --max-warnings=0",
+    "format:check": "prettier --check \".agents/skills/qa-playwright-api-authoring/examples/orders/*.mjs\" eslint.config.mjs prettier.config.mjs jsconfig.qa.json jsconfig.eslint.json",
+    "format:write": "prettier --write \".agents/skills/qa-playwright-api-authoring/examples/orders/*.mjs\" eslint.config.mjs prettier.config.mjs jsconfig.qa.json jsconfig.eslint.json",
+    "typecheck": "tsc --project jsconfig.qa.json --noEmit",
+    "quality": "npm run lint && npm run format:check && npm run typecheck"
   },
   "devDependencies": {
-    "@playwright/test": "1.65.0"
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.65.0",
+    "@types/node": "22.20.5",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-playwright": "2.12.2",
+    "globals": "17.14.0",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.1"
   }
 }

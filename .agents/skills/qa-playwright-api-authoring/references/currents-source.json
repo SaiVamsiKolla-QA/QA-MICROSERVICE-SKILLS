@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/currents-dev/playwright-best-practices-skill",
+  "revision": "0b75b5835a87de1fdd202ba965f3bc5a27738fdf",
+  "license": "MIT",
+  "licensePath": "LICENSE.md",
+  "reviewedAt": "2026-11-09 UTC",
+  "files": {
+    "testing-patterns/api-testing.md": {
+      "url": "https://github.com/currents-dev/playwright-best-practices-skill/blob/0b75b5835a87de1fdd202ba965f3bc5a27738fdf/playwright-best-practices/testing-patterns/api-testing.md",
+      "reviewSnapshotSha256": "73dda537cf6991217a82e1728acee261cf7e9ac4663dce454bb6c22c17ed752a"
+    },
+    "core/fixtures-hooks.md": {
+      "url": "https://github.com/currents-dev/playwright-best-practices-skill/blob/0b75b5835a87de1fdd202ba965f3bc5a27738fdf/playwright-best-practices/core/fixtures-hooks.md",
+      "reviewSnapshotSha256": "301ca7ecb860fec04840c4167204ab8d0bf10650720a15befbda906bcb3580ca"
+    },
+    "core/test-suite-structure.md": {
+      "url": "https://github.com/currents-dev/playwright-best-practices-skill/blob/0b75b5835a87de1fdd202ba965f3bc5a27738fdf/playwright-best-practices/core/test-suite-structure.md",
+      "reviewSnapshotSha256": "cf28f8fcbb87c4c69bdc0c834294311f5cba1f8c6c859d15582338e07e9a6622"
+    },
+    "core/test-data.md": {
+      "url": "https://github.com/currents-dev/playwright-best-practices-skill/blob/0b75b5835a87de1fdd202ba965f3bc5a27738fdf/playwright-best-practices/core/test-data.md",
+      "reviewSnapshotSha256": "2fcdef4b3439111cb035e41bf257b020736c1612de97b196c490662ccbad5545"
+    }
+  },
+  "adaptations": "Selective synthesis in maintainable-javascript.md, not wholesale upstream installation; JavaScript ESM, local fixture interface, reserved isolated ownership, independent business oracles, stable business comparisons and clause traceability. Excluded browser/POM, Faker, counters, speed claims and unsafe cleanup snippets.",
+  "additionalAdaptations": [
+    "HTTP redirect assertions via maxRedirects:0, explicit cookie-jar/storageState isolation and HttpOnly API coverage; bodyless status handling instead of universal JSON assertions",
+    "Review/data workflows remain primary; supporting references loaded only for relevant fixture/HTTP/organization work",
+    "Existing schema validators and independent business expectations retained"
+  ],
+  "licenseNotice": "currents-LICENSE.md"
+}

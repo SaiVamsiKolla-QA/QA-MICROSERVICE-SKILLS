@@ -1,0 +1,4 @@
+# Case review record
+Use JSON or Markdown as requested. Each record has caseId, sourceFile, sourceRecord, original, verdict, evidence (requirement IDs and paths), proposedCorrection (separate from original), gaps, automationReadiness, missingEvidence. Finish with uncovered requirements, unparsed records and unresolved conflicts. Do not overwrite case IDs or flatten different steps into a guessed order.
+
+Include requirement clauses, linked original Zephyr IDs and explicit covered/partial/uncovered/blocked status with reasons. Proposed cases remain proposals without an approved ID. Record fixture choices separately from missing business evidence. Readiness describes whether authoring can proceed; implementation and execution are separate records (not-implemented/implemented/blocked and not-run/passed/failed/skipped/blocked/incomplete). A Ready case need not have been implemented or run.

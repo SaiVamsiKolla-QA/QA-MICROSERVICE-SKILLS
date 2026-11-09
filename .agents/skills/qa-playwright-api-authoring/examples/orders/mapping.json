@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "scope": "Runnable synthetic example: seven approved IDs plus explicitly supplemental price/list probes. Authored mapping; execution evidence is separate.",
+  "rows": [
+    {
+      "requirementId": "R1",
+      "clause": "creation status, JSON and complete business values",
+      "zephyrCaseId": "ZEP-101",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-101] R1 R3 create and persistence",
+      "assertion": "creation status, JSON and complete business values",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R3",
+      "clause": "owner persisted read-back",
+      "zephyrCaseId": "ZEP-101",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-101] R1 R3 create and persistence",
+      "assertion": "owner persisted read-back",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R2",
+      "clause": "foreign GET/DELETE denied without mutation",
+      "zephyrCaseId": "ZEP-102",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-102] R2 foreign access preserves business state",
+      "assertion": "foreign GET/DELETE denied without mutation",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R1",
+      "clause": "invalid quantity 0 and 11 rejected",
+      "zephyrCaseId": "ZEP-103",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-103] R1 R6 invalid quantity has no effects",
+      "assertion": "invalid quantity 0 and 11 rejected",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R6",
+      "clause": "invalid quantity rejected with JSON error and no creation",
+      "zephyrCaseId": "ZEP-103",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-103] R1 R6 invalid quantity has no effects",
+      "assertion": "invalid quantity rejected with JSON error and no creation",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R2",
+      "clause": "anonymous POST denied without mutation",
+      "zephyrCaseId": "ZEP-104",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-104] R2 anonymous create denied",
+      "assertion": "anonymous POST denied without mutation",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R4",
+      "clause": "delete, absence and already absent delete",
+      "zephyrCaseId": "ZEP-105",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-105] R4 remove owned resource",
+      "assertion": "delete, absence and already absent delete",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R5",
+      "clause": "same-owner and cross-user duplicates preserve stable fields",
+      "zephyrCaseId": "ZEP-106",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-106] R5 duplicate preserves documented fields",
+      "assertion": "same-owner and cross-user duplicates preserve stable fields",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R1",
+      "clause": "accepted quantity 1 and 10 with independent totals",
+      "zephyrCaseId": "ZEP-107",
+      "scope": "approved case with documented contract assertions",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "[ZEP-107] R1 accepted quantity boundaries",
+      "assertion": "accepted quantity 1 and 10 with independent totals",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R1",
+      "clause": "invalid price boundaries rejected",
+      "zephyrCaseId": null,
+      "scope": "supplemental contract probe; no approved case ID",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "R1 R6 invalid price has no effects",
+      "assertion": "invalid price boundaries rejected",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R6",
+      "clause": "invalid price no effects",
+      "zephyrCaseId": null,
+      "scope": "supplemental contract probe; no approved case ID",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "R1 R6 invalid price has no effects",
+      "assertion": "invalid price no effects",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R3",
+      "clause": "foreign list excludes owned ID and has only caller-owned items",
+      "zephyrCaseId": null,
+      "scope": "supplemental contract probe; no approved case ID",
+      "testFile": ".agents/skills/qa-playwright-api-authoring/examples/orders/api.spec.mjs",
+      "testTitle": "R3 lists only caller-owned orders",
+      "assertion": "foreign list excludes owned ID and has only caller-owned items",
+      "coverage": {
+        "status": "covered",
+        "reason": "Direct lab assertions; not whole-contract coverage"
+      },
+      "implementation": {
+        "status": "implemented",
+        "reason": "Runnable reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R1",
+      "clause": "malformed JSON, required input fields and other invalid types",
+      "zephyrCaseId": null,
+      "testFile": null,
+      "testTitle": null,
+      "assertion": null,
+      "coverage": {
+        "status": "uncovered",
+        "reason": "Outside reference example"
+      },
+      "implementation": {
+        "status": "not-implemented",
+        "reason": "Not assigned to reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R2",
+      "clause": "invalid credentials on every route; anonymous GET and DELETE",
+      "zephyrCaseId": null,
+      "testFile": null,
+      "testTitle": null,
+      "assertion": null,
+      "coverage": {
+        "status": "uncovered",
+        "reason": "Outside reference example"
+      },
+      "implementation": {
+        "status": "not-implemented",
+        "reason": "Not assigned to reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R3",
+      "clause": "complete owner-list semantics including own entries",
+      "zephyrCaseId": null,
+      "testFile": null,
+      "testTitle": null,
+      "assertion": null,
+      "coverage": {
+        "status": "uncovered",
+        "reason": "Outside reference example"
+      },
+      "implementation": {
+        "status": "not-implemented",
+        "reason": "Not assigned to reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    },
+    {
+      "requirementId": "R6",
+      "clause": "all other non-204 content types and rejected POST categories",
+      "zephyrCaseId": null,
+      "testFile": null,
+      "testTitle": null,
+      "assertion": null,
+      "coverage": {
+        "status": "uncovered",
+        "reason": "Outside reference example"
+      },
+      "implementation": {
+        "status": "not-implemented",
+        "reason": "Not assigned to reference example"
+      },
+      "execution": {
+        "status": "not-run",
+        "command": null,
+        "evidence": null
+      }
+    }
+  ]
+}

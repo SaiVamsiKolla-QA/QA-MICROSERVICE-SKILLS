@@ -1,0 +1,6 @@
+# API implementation pattern
+Use `test` and `expect` from the target runner/fixtures. A test-scoped fixture allocates an ID, yields it and deletes it in `finally`, checking deletion and read-back. A create test asserts 201 + content-type + required fields/types + exact documented total, then GETs the resource to independently verify persistence. Separate anonymous and foreign-role requests from the authenticated default context. Assert rejected writes left state unchanged. Map `[ZEP-1]` in the title to a versioned requirement and case export; record every assertion's source. No browser binary is required for request-only tests.
+
+Do not reuse the server's serializer/calculator to generate expected values. Use the OpenAPI schema dialect actually declared; OpenAPI 3.0 schemas are not automatically JSON Schema 2020-12. Additional fields may be allowed by contract.
+
+For complete schema checks, stable create/read and rejected-write comparisons, all-resource cleanup and the mapping output format, use [response-state and cleanup](response-state-cleanup.md). Compare projected contract fields, not raw POST/GET bodies; allowed servedAt metadata may change. Teardown must attempt all IDs/operations before reporting aggregated errors alongside the original failure.
