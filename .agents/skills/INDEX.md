@@ -4,6 +4,7 @@ Choose one primary skill. Context skills support onboarding, stale facts, focuse
 
 - [ai-qa-review](ai-qa-review/SKILL.md) — Review existing microservice test code for assertion quality, reliability, diagnostic value, testability, and coverage gaps. Use for broad test-quality audits; use qa-playwright-api-review for detailed Playwright API and Zephyr traceability reviews.
 - [api-testing](api-testing/SKILL.md) — Design and extend broader endpoint and API-contract coverage with Playwright request tests. Use qa-playwright-api-authoring to implement reviewed approved Zephyr cases.
+- [bug-hunter](bug-hunter/SKILL.md) — Reproduce reported software bugs, identify root causes, and verify focused fixes with regression coverage. Use qa-api-failure-triage for API-test-specific failure classification.
 - [context-engineering](context-engineering/SKILL.md) — Select task-specific service, case, contract, fixture and failure context, refresh stale sources, or prepare a concise handoff for long tasks. Use when context is broad, missing, conflicting or stale; ordinary small edits can read their directly relevant files without invoking a separate context workflow.
 - [qa-api-failure-triage](qa-api-failure-triage/SKILL.md) — Investigate failed API tests using request/response evidence, logs, configuration and reproduction; distinguish product, automation, environment and unresolved failures.
 - [qa-api-test-data](qa-api-test-data/SKILL.md) — Create reproducible API factories, boundary inputs, seed fixtures and cleanup that support independent and parallel Playwright tests.

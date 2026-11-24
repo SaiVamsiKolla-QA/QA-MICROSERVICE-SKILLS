@@ -1,6 +1,6 @@
 # Microservice QA skills
 
-Maintain nine reusable QA skills under .agents/skills/. Keep work-service context and credentials in the consuming automation project. This repository's Orders example is synthetic, not a work-service specification.
+Maintain ten reusable QA skills under .agents/skills/. Keep work-service context and credentials in the consuming automation project. This repository's Orders example is synthetic, not a work-service specification.
 
 ## Working approach
 
